@@ -1,0 +1,6 @@
+datasources:4446c21c0da71db959a5113163a074f87afb1542
+commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
+suitesfrom:no-suites-from-option
+file:238410211b49c732d4a6dc0cc2b7e73de6cab8e1
+--test testDemo objects.Browser successful Login
+--test testDemo objects.Browser unsuccessful Login

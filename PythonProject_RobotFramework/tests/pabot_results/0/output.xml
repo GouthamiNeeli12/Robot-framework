@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-22T17:06:16.059472" rpa="false" schemaversion="5">
+<suite id="s1" name="testDemo objects" source="C:\Users\gouth\PycharmProjects\PythonProject_RobotFramework\tests\testDemo_objects.robot">
+<test id="s1-t1" name="Browser successful Login" line="15">
+<kw name="Open browser to work on ecommerce site" owner="resource" type="SETUP">
+<if>
+<branch type="IF" condition="'${browser_name}' == &quot;Chrome&quot;">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-08-22T17:06:16.610365" elapsed="0.000203"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2025-08-22T17:06:16.610901" elapsed="0.000157"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--start-maximized</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2025-08-22T17:06:16.611243" elapsed="0.000157"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2025-08-22T17:06:16.611615" elapsed="0.000132"/>
+</kw>
+<msg time="2025-08-22T17:06:16.611849" level="FAIL">Invalid IF condition: Evaluating expression '\'${browser_name}\' == "Chrome"' failed: Variable '${browser_name}' not found.</msg>
+<status status="FAIL" start="2025-08-22T17:06:16.608163" elapsed="0.003805">Invalid IF condition: Evaluating expression '\'${browser_name}\' == "Chrome"' failed: Variable '${browser_name}' not found.</status>
+</branch>
+<branch type="ELSE IF" condition="'${browser_name}' == &quot;Firefox&quot;">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].FirefoxOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2025-08-22T17:06:16.612356" elapsed="0.000140"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2025-08-22T17:06:16.612696" elapsed="0.000133"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--start-maximized</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2025-08-22T17:06:16.612990" elapsed="0.000119"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Firefox</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2025-08-22T17:06:16.613281" elapsed="0.000123"/>
+</kw>
+<status status="NOT RUN" start="2025-08-22T17:06:16.612080" elapsed="0.001400"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>unsupported</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-08-22T17:06:16.613817" elapsed="0.000118"/>
+</kw>
+<status status="NOT RUN" start="2025-08-22T17:06:16.613590" elapsed="0.000426"/>
+</branch>
+<status status="FAIL" start="2025-08-22T17:06:16.608107" elapsed="0.005979">Invalid IF condition: Evaluating expression '\'${browser_name}\' == "Chrome"' failed: Variable '${browser_name}' not found.</status>
+</if>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-08-22T17:06:16.614284" elapsed="0.000141"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2025-08-22T17:06:16.614590" elapsed="0.000142"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>LoginPage Practise | Rahul Shetty Academy</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2025-08-22T17:06:16.614886" elapsed="0.000264"/>
+</kw>
+<status status="FAIL" start="2025-08-22T17:06:16.607445" elapsed="0.008076">Invalid IF condition: Evaluating expression '\'${browser_name}\' == "Chrome"' failed: Variable '${browser_name}' not found.</status>
+</kw>
+<kw name="Close Browser Session" owner="resource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-22T17:06:16.617133" elapsed="0.000483"/>
+</kw>
+<status status="PASS" start="2025-08-22T17:06:16.616288" elapsed="0.001496"/>
+</kw>
+<status status="FAIL" start="2025-08-22T17:06:16.605833" elapsed="0.012070">Setup failed:
+Invalid IF condition: Evaluating expression '\'${browser_name}\' == "Chrome"' failed: Variable '${browser_name}' not found.</status>
+</test>
+<doc>first demo project to execute login scenario</doc>
+<status status="FAIL" start="2025-08-22T17:06:16.090377" elapsed="0.528401"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testDemo objects" id="s1" pass="0" fail="1" skip="0">testDemo objects</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-08-22T17:06:16.581168" level="ERROR">Error in file 'C:\Users\gouth\PycharmProjects\PythonProject_RobotFramework\PO\resource.robot' on line 6: Setting 'Suite Setup' is not allowed in resource file.</msg>
+</errors>
+</robot>

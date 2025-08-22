@@ -1,0 +1,11 @@
+==============================================================================
+testDemo objects :: first demo project to execute login scenario              
+==============================================================================
+Browser successful Login                                              | FAIL |
+Setup failed:
+Invalid IF condition: Evaluating expression '\'${browser_name}\' == "Chrome"' failed: Variable '${browser_name}' not found.
+------------------------------------------------------------------------------
+testDemo objects :: first demo project to execute login scenario      | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\gouth\PycharmProjects\PythonProject_RobotFramework\tests\pabot_results\0\output.xml
